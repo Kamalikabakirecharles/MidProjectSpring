@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUCA | Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="shortcut icon" th:href="@{/images/favicon.png}" />
+</head>
+<body>
+<section class="main" th:style="'background-image: url(' + @{/images/hero-bg.png} + ');'">
+        
+        <nav>
+            <a href="index" class="logo">
+                <img src="images/logo.png" height="40px" />
+            </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn">
+                <span class="nav-icon"></span>
+            </label>
+            <ul class="menu" style="border-radius: 5px;">
+                <li><a th:href="@{/About}">About</a></li>
+                <li><a th:href="@{/Login}">Report</a></li>
+                <li><a th:href="@{/Login}">Apply Now</a></li>
+                <li><a href="Login" class="active" th:onclick="'document.getElementById('id01').style.display=''block''" style="width:auto; border-radius: 5px; cursor: pointer;">Login</a></li>
+            </ul>
+        </nav>
+        <!--main-content-->
+        <div class="home-content">
+            
+            <!--text-->
+            <div class="home-text" >
+
+                <h3 style="color: white; letter-spacing: 2px;">ADVENTIST UNIVERSITY OF CENTRAL AFRICA</h3>
+                <h1 style="color: white;"> University Portal</h1>
+                <p style="color: white;">The purpose of Schools is to prepare students with promise
+                    to enhance their intellectual, physical, social, emotional, spiritual,
+                    and artistic growth so that they may realize their power for good
+                    as citizens</p>
+            <!--login-btn-->
+            <a th:href="@{/Login}" class="main-login" style="border-radius: 5px;">Apply Now</a>
+            </div>
+            <!--img-->
+            <div class="home-img" style="width: 500px;">
+                <img src="images/hat.png" width="500px" style="text-shadow: 20px 22px;"/>
+            </div>
+            
+        </div>
+    </section>
+    <!--footer------------->
+    <footer>
+        <p>Copyright (C) - 2023 | Developed By <a>KAMONGI SETONDE ERIC</a> </p>
+    </footer>
+    
+</body>
+</html>
